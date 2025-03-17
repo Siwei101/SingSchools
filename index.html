@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Discovery</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>School Discovery</h1>
+
+    <!-- Filter Section -->
+    <div>
+        <label for="mainlevel_code">School Level:</label>
+        <select id="mainlevel_code">
+            <option value="">All</option>
+            <option value="CENTRALISED INSTITUTE">Centralised Institute</option>
+            <option value="JUNIOR COLLEGE">Junior College</option>
+            <option value="MIXED LEVELS">Mixed Levels</option>
+            <option value="PRIMARY">Primary</option>
+            <option value="SECONDARY">Secondary</option>
+        </select>
+
+        <label for="zone_code">Zone:</label>
+        <select id="zone_code">
+            <option value="">All</option>
+            <option value="North">North</option>
+            <option value="South">South</option>
+            <option value="East">East</option>
+            <option value="West">West</option>
+        </select>
+
+        <label for="region_code">Region:</label>
+        <select id="region_code">
+            <option value="">All</option>
+            <option value="ANG MO KIO">Ang Mo Kio</option>
+            <option value="BEDOK">Bedok</option>
+            <option value="BISHAN">Bishan</option>
+            <option value="BUKIT BATOK">Bukit Batok</option>
+            <option value="BUKIT MERAH">Bukit Merah</option>
+            <option value="BUKIT PANJANG">Bukit Panjang</option>
+            <option value="BUKIT TIMAH">Bukit Timah</option>
+            <option value="CENTRAL">Central</option>
+            <option value="CHOA CHU KANG">Choa Chu Kang</option>
+            <option value="CLEMENTI">Clementi</option>
+            <option value="GEYLANG">Geylang</option>
+            <option value="HOUGANG">Hougang</option>
+            <option value="JURONG EAST">Jurong East</option>
+            <option value="JURONG WEST">Jurong West</option>
+            <option value="KALLANG">Kallang</option>
+            <option value="MARINE PARADE">Marine Parade</option>
+            <option value="NOVENA">Novena</option>
+            <option value="PASIR RIS">Pasir Ris</option>
+            <option value="PUNGGOL">Punggol</option>
+            <option value="QUEENSTOWN">Queenstown</option>
+            <option value="SEMBAWANG">Sembawang</option>
+            <option value="SENG KANG">Seng Kang</option>
+            <option value="SERANGOON">Serangoon</option>
+            <option value="TAMPINES">Tampines</option>
+            <option value="TOA PAYOH">Toa Payoh</option>
+            <option value="WOODLANDS">Woodlands</option>
+            <option value="YISHUN">Yishun</option>
+        </select>
+
+        <label for="type_code">Type:</label>
+        <select id="type_code">
+            <option value="">All</option>
+            <option value="Government">Government</option>
+            <option value="Independent">Independent</option>
+            <option value="Private">Private</option>
+        </select>
+
+        <label for="nature_code">Nature:</label>
+        <select id="nature_code">
+            <option value="">All</option>
+            <option value="Co-ed">Co-ed</option>
+            <option value="Boys">Boys</option>
+            <option value="Girls">Girls</option>
+        </select>
+
+        <label for="session_code">Session:</label>
+        <select id="session_code">
+            <option value="">All</option>
+            <option value="Single Session">Single Session</option>
+            <option value="Double Session">Double Session</option>
+            <option value="Full Day">Full Day</option>
+        </select>
+
+        <button id="searchButton">Search</button>
+    </div>
+
+    <!-- Results Table -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>School Name</th>
+                <th>Address</th>
+                <th>Bus</th>
+                <th>MRT</th>
+            </tr>
+        </thead>
+        <tbody id="schoolTableBody">
+        </tbody>
+    </table>
+
+    <div id="graph-container">
+        <h2>Schools and Transportations</h2>
+        <div id="neo4j-graph"></div>
+    <div>
+
+    <script src="script.js"></script>
+</body>
+</html>
